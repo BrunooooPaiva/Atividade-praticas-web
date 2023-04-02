@@ -1,0 +1,68 @@
+<!-- 
+Curso de Engenharia de Software - UniEVANGÉLICA
+Disciplina de Programação Web
+Dev: Bruno Paiva Souza
+DATA: 07/03/2023
+ -->
+
+<!DOCTYPE html> <!--Declaração do tipo de documento-->
+<html> <!--Início do documento HTML-->
+
+<head> <!--Cabeçalho da página-->
+	<title>Formulário Desenhos animados</title> <!--Título da página-->
+	<!-- <link rel="stylesheet" href="style.css"> -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+		integrity="sha384-DpIpw7wLXRp0nQ2rK/ZU8vmG+W6lX9e1pdE6LsW6fwOYwM5oJzV9ZQoW8d6TAq1" </head>
+
+<body> <!--Corpo da página-->
+	<div class="container mt-5">
+		<form action="processa_dados.php" method="post"> <!--Formulário-->
+			<div class="form-group">
+				<label for="nome">Desenho:</label> <!--Etiqueta para cada elemento-->
+				<input type="text" class="form-control" id="nome" name="nome">
+			</div> <!--Entrada de formulário-->
+
+			<div class="form-group">
+				<label for="email">Personagem:</label>
+				<input type="email" class="form-control" id="email" name="email">
+			</div>
+
+			<div class="form-group">
+				<label for="senha">Idade:</label>
+				<input type="password" class="form-control" id="senha" name="senha">
+			</div>
+
+			<div class="form-group">
+				<label for="idade">Poder:</label>
+				<input type="number" class="form-control" id="idade" name="idade">
+			</div>
+
+			<div class="form-group">
+				<label for="sexo">Sexo:</label><br>
+				<div class="form-check form-check-inline">
+					<input type="radio" class="form-check-input" id="sexo_feminino" name="sexo" value="feminino">
+					<label class="form-check-label" for="sexo_feminino">Feminino</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input type="radio" class="form-check-input" id="sexo_masculino" name="sexo" value="masculino">
+					<label class="form-check-label" for="sexo_masculino">Masculino</label>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="interesses">Ano de lançamento:</label><br>
+				<div class="form-check form-check-inline">
+					<input type="checkbox" class="form-check-input" id="interesse_esportes" name="interesses[]"
+						value="19">
+					<label class="form-check-label" for="interesse_esportes">1908 - 1960</label>
+				</div>
+				<div class="form-check form-check-inline">
+					<input type="checkbox" class="form-check-input" id="interesse_cinema" name="interesses[]"
+						value="cinema">
+					<label class="form-check-label" for="interesse_cinema">1961 - 2000</label>
+
+
+		</form>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+<!-- Curso de Engenharia de Software - UniEVANGÉLICA 
+Disciplina de Programação Web 
+Dev: Bruno Paiva Souza 
+DATA: 29/03/2023 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Agendamento</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">UniSoft</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="cadpaciente.html">Cadastro Paciente<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="agendamento.html">Agendamento<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="consultas.html">Consultas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="consultaslist.html">Consultas marcadas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="medicamentos.html">Medicamentos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row d-flex">
+            <div class="col-md-6">
+                <h2>Agendar Consulta</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="medico">Médico:</label>
+                        <select class="form-control" id="medico" name="medico">
+                            <option value="dr-joao">Dr. João</option>
+                            <option value="dra-maria">Dra. Maria</option>
+                            <option value="dra-maria">Dra. Julie</option>
+                            <option value="dra-maria">Dra. Osvaldo</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipo-consulta">Tipo de Consulta:</label>
+                        <select class="form-control" id="tipo-consulta" name="tipo-consulta">
+                            <option value="clinica-geral">Clínica Geral</option>
+                            <option value="cardiologia">Cardiologia</option>
+                            <option value="dermatologia">Dermatologia</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="data">Data:</label>
+                        <input type="date" class="form-control" id="data" name="data">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="horario">Horário:</label>
+                        <select class="form-control" id="horario" name="horario">
+                            <option value="08:00">08:00</option>
+                            <option value="09:00">09:00</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                        </select>
+                    </div>
+                    <div class="cold-md-6 calendar">
+                        <div id="calendar"></div>
+                    </div>
+
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+                    <script
+                        src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.0/fullcalendar.min.js"></script>
+                    <link rel="stylesheet"
+                        href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.0/fullcalendar.min.css" />
+
+                    <script>
+                        // A função $(document).ready(function(){...}) é usada para garantir que o código só será executado após o carregamento completo da página.
+                        $(document).ready(function () {
+                            // A seguir, é chamado o método fullCalendar() que é aplicado ao elemento com id #calendar. Esse método define as opções padrão de exibição do calendário, como defaultView: 'month' que define a exibição mensal como padrão.
+                            $('#calendar').fullCalendar({
+                                defaultView: 'month',
+                                events: [
+                                    {
+                                        title: 'Consulta 1',
+                                        start: '2023-04-01T10:00:00',
+                                        end: '2023-04-01T11:00:00'
+                                    },
+                                    {
+                                        title: 'Consulta 2',
+                                        start: '2023-04-02T14:00:00',
+                                        end: '2023-04-02T15:00:00'
+                                    },
+                                    {
+                                        title: 'Consulta 3',
+                                        start: '2023-04-05T16:00:00',
+                                        end: '2023-04-05T17:00:00'
+                                    }
+                                ]
+                            });
+                        });
+                    </script>
+
+
+                    <button type="submit" class="btn btn-primary">Agendar</button>
+                </form>
+            </div>

@@ -1,0 +1,61 @@
+<!-- 
+Curso de Engenharia de Software - UniEVANGÉLICA
+Disciplina de Programação Web
+Dev: Bruno Paiva Souza
+DATA: 07/03/2023
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desenhos animados</title>
+</head>
+
+<body>
+  <h1>Desenhos Animados</h1>
+  <ul>
+    <li><a href="codigo1.html">Site 1 para visuazalição da História de alguns personagens</a></li>
+    <li><a href="codigo2.html">Site 2 para visuazalição de um formulário do personagem</a></li>
+    <li><a href="codigo3.html">Site 3 para visuazalição de tabela de alguns personagens</a></li>
+    <li><a href="codigo4.html">Site 4 para visuazalição da imagem de alguns desenhos animados</a></li>
+  </ul>
+  <h3>TABELA DO PERSONAGEM BEN 10</h3>
+  <table border='1'>
+    <thead>
+      <tr>
+        <th>Personagem</th>
+        <th>Idade</th>
+        <th>Poder</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Ben 10</td>
+        <td>10</td>
+        <td>Virar alienígena</td>
+      </tr>
+  </table>
+  <h3>Formulário do seu personagem favorito</h3>
+  <form action="processa_dados.php" method="post">
+    <label for="nome">Desenho:</label>
+    <input type="text" id="nome" name="nome"><br>
+
+    <label for="email">Personagem:</label>
+    <input type="email" id="email" name="email"><br>
+
+    <label for="senha">Idade:</label>
+    <input type="password" id="senha" name="senha"><br>
+
+    <label for="idade">Poder:</label>
+    <input type="number" id="idade" name="idade"><br>
+    <input type="submit" value="Enviar">
+  </form>
+  <h3>Imagem do desenho animado Thomas e Seus Amigos</h3>
+  <img src="https://tvcultura.com.br/upload/tvcultura/acontece/20181210171309_acontece-thomas.jpg"
+    alt="Thomas e seus amigos">
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!-- Curso de Engenharia de Software - UniEVANGÉLICA 
+Disciplina de Programação Web 
+Dev: Bruno Paiva Souza 
+DATA: 29/03/2023 -->
+
+<!DOCTYPE html>
+<html>
+
+<!-- A tag <head> contém informações sobre a página, como título, metadados e links para arquivos externos, como o arquivo CSS do Bootstrap e os arquivos JavaScript necessários para a interatividade da página. -->
+
+<head>
+    <title>Cadastro de Paciente</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<!-- A tag <body> é onde o conteúdo da página é colocado. -->
+
+<body>
+    <!-- A tag <nav> é usada para criar a barra de navegação no topo da página. -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">UniSoft</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- A tag <div> com classe "container" é usada para agrupar o conteúdo da página em um contêiner com largura fixa. -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="cadpaciente.html">Cadastro Paciente<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="agendamento.html">Agendamento<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="consultas.html">Consultas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="consultaslist.html">Consultas marcadas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="medicamentos.html">Medicamentos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container mt-4">
+        <!-- A tag <form> é usada para criar um formulário de cadastro de paciente. Ele contém diversos elementos <input> do tipo texto, data, telefone e outros, com a tag <label> para nomeá-los. O botão "Cadastrar" é criado com a tag <button> e a classe "btn btn-primary". -->
+        <form>
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" class="form-control" id="nome" name="nome">
+            </div>
+
+            <div class="form-group">
+                <label for="data-nascimento">Data de Nascimento:</label>
+                <input type="date" class="form-control" id="data-nascimento" name="data-nascimento">
+            </div>
+
+            <div class="form-group">
+                <label for="cpf">CPF:</label>
+                <input type="text" class="form-control" id="cpf" name="cpf">
+            </div>
+
+            <div class="form-group">
+                <label for="endereco">Endereço:</label>
+                <input type="text" class="form-control" id="endereco" name="endereco">
+            </div>
+
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" class="form-control" id="telefone" name="telefone">
+            </div>
+            <!-- O Bootstrap é usado para criar estilos e layout para a página, como a barra de navegação responsiva, o contêiner com largura fixa e os estilos para os elementos <input> e <button>. Além disso, o Bootstrap também fornece funcionalidades JavaScript para a página, como o menu responsivo da barra de navegação. -->
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
+        </form>
+    </div>
+</body>
+
+</html>

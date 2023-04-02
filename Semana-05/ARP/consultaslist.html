@@ -1,0 +1,97 @@
+<!-- Curso de Engenharia de Software - UniEVANGÉLICA 
+Disciplina de Programação Web 
+Dev: Bruno Paiva Souza 
+DATA: 29/03/2023 -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Consultas Marcadas</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">UniSoft</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="cadpaciente.html">Cadastro Paciente<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="agendamento.html">Agendamento<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="consultas.html">Consultas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="consultaslist.html">Consultas marcadas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="medicamentos.html">Medicamentos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Consultas Agendadas</h2>
+            </div>
+            <div class="col-md-6">
+                <form class="form-inline float-right">
+                    <div class="form-group">
+                        <label class="sr-only" for="busca-consulta">Busca de Consulta</label>
+                        <input type="text" class="form-control mb-2 mr-sm-2" id="busca-consulta"
+                            placeholder="Digite o nome ou CPF">
+                    </div>
+                    <button type="submit" class="btn btn-primary mb-2">Buscar</button>
+                </form>
+            </div>
+        </div>
+
+        <table class="table mt-4">
+            <thead>
+                <tr>
+                    <th>Paciente</th>
+                    <th>Médico</th>
+                    <th>Data</th>
+                    <th>Horário</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>João da Silva</td>
+                    <td>Dr. José</td>
+                    <td>01/04/2023</td>
+                    <td>14:00</td>
+                </tr>
+                <tr>
+                    <td>Lucas Souza</td>
+                    <td>Dra. Maria</td>
+                    <td>03/04/2023</td>
+                    <td>09:00</td>
+                </tr>
+                <tr>
+                    <td>Fernanda Santos</td>
+                    <td>Dr. João</td>
+                    <td>05/04/2023</td>
+                    <td>16:00</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
